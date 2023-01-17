@@ -3,6 +3,10 @@ import os
 import mercadopago
 
 def lambda_handler(event, context):
+
+    # Profe me confundi con el link del api mandandolo a silabuz, es este para que pueda probarlo:
+    # https://p7rehb0xq7.execute-api.us-east-2.amazonaws.com/default/new
+
     sdk = mercadopago.SDK(os.environ["ACCESS_TOKEN"])
     products = json.loads(event["body"])
     
